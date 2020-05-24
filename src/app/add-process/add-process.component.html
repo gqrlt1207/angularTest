@@ -1,0 +1,37 @@
+<h3>Add Process</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">BonitaProcess</label>
+      <input type="text" class="form-control" id="bonitaprocess" required [(ngModel)]="process.bonitaprocess" name="bonitaprocess">
+    </div>
+
+    <div class="form-group">
+      <label for="name">BonitaProcessVersion</label>
+      <input type="text" class="form-control" id="bonitaprocessversion" required [(ngModel)]="process.bonitaprocessversion" name="bonitaprocessversion">
+    </div>
+
+    <div class="form-group">
+      <label for="name">AlertType</label>
+      <input type="text" class="form-control" id="alerttype" required [(ngModel)]="process.alerttype" name="alerttype">
+    </div>
+
+    <div class="form-group">
+        <label for="name">OsType</label>
+        <input type="text" class="form-control" id="ostype" required [(ngModel)]="process.ostype" name="ostype">
+      </div>
+
+      <div class="form-group">
+        <label for="name">ContractInfo</label>
+        <input type="text" class="form-control" id="contractinfo" required [(ngModel)]="process.contractinfo" name="contractinfo">
+      </div>
+
+      
+    <button type="submit" class="btn btn-success">Submit</button>
+   </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

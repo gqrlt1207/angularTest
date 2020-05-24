@@ -1,0 +1,34 @@
+<div class="panel panel-primary times">
+    <div class="panel-heading times">
+      <h2>Process List</h2>
+    </div>
+    <div class="panel-body times">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>BonitaProcess</th>
+            <th width=10px>Version</th>
+            <th>AlertType</th>
+            <th>OsType</th>
+            <th>ContractInfo</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let process of processes | async">
+          <td width=10px>{{process.id}}</td>
+          <td>{{process.bonitaprocess}}</td>
+          <td witdth=10px>{{process.bonitaprocessversion}}</td>
+          <td>{{process.alerttype}}</td>
+          <td width=15px>{{process.ostype}}</td>
+          <td width=50px>{{process.contractinfo}}</td>
+          <td><button (click)="deleteProcess(process.id)" class="btn btn-danger">Delete</button>
+              <button (click)="processDetails(process.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+</div>

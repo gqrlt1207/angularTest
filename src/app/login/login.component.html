@@ -1,0 +1,17 @@
+<div class="signin-content">
+         <form  (ngSubmit)="onSubmit()">
+          <p>Please login to continue</p>
+            <div>
+            <label>User</label> <br/>
+            <input type='text'  required   [(ngModel)]="user.username" name="username"><br/>
+             </div>
+
+            <div>
+            <label>Password</label> <br/>
+            <input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+            </div>
+                    
+          <button color="primary" > Login</button>
+        </form>
+      
+</div>
